@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/CardDeck/.vs/CardDeck
+/CardDeck/CardDeck.BusinessObjects/bin/Debug/netcoreapp3.1
+/CardDeck/CardDeck.BusinessObjects/obj
+/CardDeck/CardDeck.Client/bin/Debug/netcoreapp3.1
+/CardDeck/CardDeck.Client/obj
+/CardDeck/CardDeck.UserInterface/bin/Debug/netcoreapp3.1
+/CardDeck/CardDeck.UserInterface/obj
+/CardDeck/CardDeckTests/obj
+/CardDeck/CardDeckTests/bin/Debug/netcoreapp3.1
