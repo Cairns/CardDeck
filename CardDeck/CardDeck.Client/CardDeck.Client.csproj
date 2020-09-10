@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CardDeck.BusinessObjects\CardDeck.BusinessObjects.csproj" />
+    <ProjectReference Include="..\CardDeck.Common\CardDeck.Common.csproj" />
+    <ProjectReference Include="..\CardDeck.UserInterface\CardDeck.UserInterface.csproj" />
   </ItemGroup>
 
 </Project>

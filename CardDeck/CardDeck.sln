@@ -12,7 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardDeck.BusinessObjects", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardDeck.UserInterface", "CardDeck.UserInterface\CardDeck.UserInterface.csproj", "{05CE7A9E-B24D-4CE8-A6D9-F8B5AEDE24A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardDeckTests", "CardDeckTests\CardDeckTests.csproj", "{C616A03A-C612-4E5F-86F1-B1F2E87AE1A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardDeckTests", "CardDeckTests\CardDeckTests.csproj", "{C616A03A-C612-4E5F-86F1-B1F2E87AE1A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardDeck.Common", "CardDeck.Common\CardDeck.Common.csproj", "{7D67381D-4283-4C2F-A913-49212315B4C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{C616A03A-C612-4E5F-86F1-B1F2E87AE1A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C616A03A-C612-4E5F-86F1-B1F2E87AE1A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C616A03A-C612-4E5F-86F1-B1F2E87AE1A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D67381D-4283-4C2F-A913-49212315B4C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D67381D-4283-4C2F-A913-49212315B4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D67381D-4283-4C2F-A913-49212315B4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D67381D-4283-4C2F-A913-49212315B4C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

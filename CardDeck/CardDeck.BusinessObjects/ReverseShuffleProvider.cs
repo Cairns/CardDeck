@@ -11,9 +11,16 @@ namespace CardDeck
     /// </summary>
     public class ReverseShuffleProvider : IShuffleProvider
     {
+        public string Name { get => "Reverse"; }
         public void Shuffle(IList<Card> cards)
         {
-            Enumerable.Reverse(cards);
+            var copy = new List<Card>(cards);
+            cards.Clear();
+            copy.Reverse();
+            foreach (var item in copy)
+            {
+                cards.Add(item);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 using CardDeck;
+using CardDeck.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -41,6 +42,22 @@ namespace CardDeckTests
         }
 
         [TestMethod]
+        public void Shuffling_Deck_Should_Reorder_Deck()
+        {
+            var shuffler = new ReverseShuffleProvider();
+
+            var deck = new Deck(shuffler);
+
+            var expected = deck.Cards[0];
+
+            deck.Shuffle();
+
+            var actual = deck.Cards[0];
+
+            Assert.AreNotEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Shuffling_Non_Full_Deck_Should_Throw_Exception()
         {
             var shuffler = new ReverseShuffleProvider();
@@ -50,7 +67,7 @@ namespace CardDeckTests
             deck.Draw();
 
             Assert.IsTrue(!deck.IsFull());
-            Assert.ThrowsException<Exception>(() => deck.Shuffle());
+            Assert.ThrowsException<InvalidDeckOperationException>(() => deck.Shuffle());
         }
 
         [TestMethod]
@@ -63,7 +80,21 @@ namespace CardDeckTests
             deck.Cards.Clear();
 
             Assert.IsTrue(deck.IsEmpty());
-            Assert.ThrowsException<Exception>(() => deck.Shuffle());
+            Assert.ThrowsException<InvalidDeckOperationException>(() => deck.Shuffle());
+        }
+
+        [TestMethod]
+        public void Resetting_Deck_Should_Generate_New_Full_Deck()
+        {
+            var shuffler = new ReverseShuffleProvider();
+
+            var deck = new Deck(shuffler);
+
+            deck.Cards.Clear();
+
+            deck.Reset();
+
+            Assert.IsTrue(deck.IsFull());
         }
     }
 }

@@ -9,6 +9,7 @@ namespace CardDeck
     /// </summary>
     public interface IShuffleProvider
     {
+        string Name { get; }
         void Shuffle(IList<Card> cards);
     }
 }

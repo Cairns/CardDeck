@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardDeck.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace CardDeck
         {
             if (this.IsEmpty())
             {
-                throw new Exception("Cannot draw from an empty deck");
+                throw new InvalidDeckOperationException("Cannot draw from an empty deck");
             }
 
             Card card = this.Cards.FirstOrDefault();
@@ -94,12 +95,12 @@ namespace CardDeck
         {
             if (this.IsEmpty())
             {
-                throw new Exception("Cannot shuffle empty deck");
+                throw new InvalidDeckOperationException("Cannot shuffle empty deck");
             }
 
             if (!this.IsFull())
             {
-                throw new Exception("Cannot shuffle partial deck, must be full");
+                throw new InvalidDeckOperationException("Cannot shuffle partial deck, must be full");
             }
 
             this.shuffler.Shuffle(this.Cards);

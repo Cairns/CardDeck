@@ -12,3 +12,5 @@
 /CardDeck/CardDeck.UserInterface/obj
 /CardDeck/CardDeckTests/obj
 /CardDeck/CardDeckTests/bin/Debug/netcoreapp3.1
+/CardDeck/CardDeck.Common/obj
+/CardDeck/CardDeck.Common/bin/Debug/netcoreapp3.1

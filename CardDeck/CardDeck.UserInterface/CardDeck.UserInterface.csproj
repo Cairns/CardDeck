@@ -1,8 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>CardDeck</RootNamespace>
+    <RootNamespace>CardDeck.UI</RootNamespace>
+	<UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CardDeck.BusinessObjects\CardDeck.BusinessObjects.csproj" />
+    <ProjectReference Include="..\CardDeck.Common\CardDeck.Common.csproj" />
+  </ItemGroup>
 
 </Project>
